@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PostDetailController">
+   <content>
+      <JFXTabPane fx:id="tab" prefHeight="769.0" prefWidth="1297.0">
+         <tabs>
+            <Tab text="Details">
+               <content>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="768.0" prefWidth="1300.0">
+                     <children>
+                        <ImageView fx:id="image" fitHeight="295.0" fitWidth="1284.0" layoutX="-3.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../../../../../Users/Hamouda/Desktop/festival-big.jpg" />
+                           </image></ImageView>
+                        <Label fx:id="title" layoutX="26.0" layoutY="205.0" prefHeight="57.0" prefWidth="1262.0" text="This is a title" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold Italic" size="41.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="date" layoutX="197.0" layoutY="254.0" prefHeight="21.0" prefWidth="168.0" text="2019-06-04" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                        <Label fx:id="description" alignment="TOP_LEFT" layoutX="-2.0" layoutY="322.0" lineSpacing="0.5" prefHeight="182.0" prefWidth="1282.0" style="-fx-background-color: e4e4e4;" text="Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker." wrapText="true">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="14.0" layoutY="55.0" onMouseClicked="#goBack" size="25" wrappingWidth="21.0">
+                           <effect>
+                              <Blend mode="SRC_ATOP" />
+                           </effect></FontAwesomeIconView>
+                        <JFXButton fx:id="edit" buttonType="RAISED" layoutX="1145.0" layoutY="278.0" onAction="#edit" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #93E89B;" text="Edit" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Medium" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="16.0" wrappingWidth="21.571428298950195" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="delete" buttonType="RAISED" layoutX="1040.0" layoutY="278.0" onAction="#delete" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #F96363;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Medium" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="TRASH_ALT" size="16.0" wrappingWidth="21.571428298950195" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXTabPane />
+                        <JFXTextArea fx:id="labelComment" layoutX="35.0" layoutY="540.0" prefHeight="107.0" prefWidth="590.0" promptText="Votre message" text="Your comment ...&#10;">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </JFXTextArea>
+                        <FontAwesomeIconView glyphName="EDIT" layoutX="15.0" layoutY="564.0" size="20" />
+                        <JFXButton fx:id="commentAdd" layoutX="507.0" layoutY="660.0" onAction="#addComment" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: ff214f; -fx-text-fill: white;" text="Add comment">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <Label fx:id="idd" layoutX="622.0" layoutY="103.0" opacity="0.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabX" text="Comments">
+               <content>
+                  <AnchorPane fx:id="anchorComment" prefHeight="1498.0" prefWidth="1052.0" />
+               </content></Tab>
+         </tabs>
+      </JFXTabPane>
+   </content>
+</ScrollPane>
